@@ -13,7 +13,8 @@ def getQdbus():
   return None
 
 def setKvantumColor():
-  if not infoTracking.getInfo(LoadedTheme).get("ChangeKvantum", True):
+  loadedTheme = infoTracking.getInfo().get("LoadedTheme")
+  if not loadedTheme.get("ChangeKvantum", True):
     return
 
   color = infoTracking.getInfo()["Color"]
