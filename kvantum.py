@@ -13,6 +13,9 @@ def getQdbus():
   return None
 
 def setKvantumColor():
+  if not infoTracking.getInfo(LoadedTheme).get("ChangeKvantum", True):
+    return
+
   color = infoTracking.getInfo()["Color"]
 
   ET.register_namespace('inkscape', "http://www.inkscape.org/namespaces/inkscape")
