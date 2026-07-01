@@ -61,3 +61,5 @@ def setKvantumText():
 
   with open(kvconfig, 'w') as configfile:
     config.write(configfile) 
+
+setKvantumColor()
